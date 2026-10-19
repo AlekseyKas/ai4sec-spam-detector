@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ai4sec-spam-detector
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: MODEL_DIR
+        value: /app/models
